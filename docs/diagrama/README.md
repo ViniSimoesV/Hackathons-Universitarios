@@ -1,3 +1,3 @@
 # Diagrama UML
 
-![UML](docs/diagrama/img/HackathonsUniversitariosUML.drawio.png "Diagrama UML do Projeto.")
+![UML](img/HackathonsUniversitariosUML.drawio.png "Diagrama UML do Projeto.")
