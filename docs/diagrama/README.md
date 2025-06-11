@@ -5,3 +5,4 @@
 
 
 - Versão 0.2
+![UML](img/HackathonsUniversitariosUML2.drawio.png "Diagrama UML do Projeto.")
