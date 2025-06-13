@@ -36,7 +36,6 @@ public class main {
         Empresa google = new Empresa(3, "Google Brasil");
 
         // Criar Pessoas (Estudantes, Profissionais, Jurados)
-        // Adicionado o atributo 'telefonePessoa' nos construtores
         Pessoa_Estudante estudante1 = new Pessoa_Estudante(1, "Ana Silva", "111.111.111-11", "31988881111", pucMinas, "Engenharia de Software");
         Pessoa_Estudante estudante2 = new Pessoa_Estudante(2, "Bruno Costa", "222.222.222-22", "31988882222", pucMinas, "Ciência da Computação");
         Pessoa_Estudante estudante3 = new Pessoa_Estudante(3, "Carlos Dias", "333.333.333-33", "31988883333", pucMinas, "Sistemas de Informação");
@@ -67,21 +66,21 @@ public class main {
 
         System.out.println("\n--- 2. Criação e Adição de Equipes (com 5 alunos cada) ---");
         // Cria 2 equipes com 5 alunos cada; 
-        Equipe equipe1 = new Equipe(0, "Time Alfa"); // ID será gerado pelo DAO
+        Equipe equipe1 = new Equipe(0, "Time Alfa"); 
         equipe1.adicionarMembro(estudante1);
         equipe1.adicionarMembro(estudante2);
         equipe1.adicionarMembro(estudante3);
         equipe1.adicionarMembro(estudante4);
         equipe1.adicionarMembro(estudante5);
-        equipesDAO.adicionarEquipe(equipe1); // Adiciona a equipe ao DAO
+        equipesDAO.adicionarEquipe(equipe1); 
 
-        Equipe equipe2 = new Equipe(0, "Time Beta"); // ID será gerado pelo DAO
+        Equipe equipe2 = new Equipe(0, "Time Beta"); 
         equipe2.adicionarMembro(estudante6);
         equipe2.adicionarMembro(estudante7);
         equipe2.adicionarMembro(estudante8);
         equipe2.adicionarMembro(estudante9);
         equipe2.adicionarMembro(estudante10);
-        equipesDAO.adicionarEquipe(equipe2); // Adiciona a equipe ao DAO
+        equipesDAO.adicionarEquipe(equipe2); 
 
         System.out.println("\nEquipes Cadastradas:");
         equipesDAO.listarTodasEquipes().forEach(System.out::println);
@@ -91,10 +90,6 @@ public class main {
         // Adiciona um projeto diferente para cada equipe: 
         Projeto projeto1 = new Projeto(0, "Plataforma de Doações Online", prof1, equipe1); // ID será gerado pelo DAO
         Projeto projeto2 = new Projeto(0, "Sistema de Monitoramento de Qualidade do Ar", prof2, equipe2); // ID será gerado pelo DAO
-
-        // Nota: O enunciado não pede um DAO específico para Projetos.
-        // Portanto, Projetos serão manipulados diretamente e adicionados às Apresentações.
-        // Se Projeto precisasse ser gerenciado de forma independente, teríamos um ProjetoDAO.
 
         System.out.println("\n--- 4. Criar uma banca avaliadora para cada projeto (cada banca deve conter 4 jurados) ---");
         // Criar uma banca avaliadora para cada projeto (cada banca deve conter 4 jurados): 
@@ -130,7 +125,7 @@ public class main {
         banca1.getJuradosNotas().put(jurado2, 9); // Jurado 2 dá nota 9
         banca1.getJuradosNotas().put(jurado3, 7); // Jurado 3 dá nota 7
         banca1.getJuradosNotas().put(jurado4, 8); // Jurado 4 dá nota 8
-        apresentacao1.avaliar(); // A apresentação solicita à banca que calcule a nota
+        apresentacao1.avaliar(); 
         System.out.println("Nota Final do Projeto 1: " + projeto1.getNotaFinal());
 
         System.out.println("\nAvaliando Projeto 2: " + projeto2.getTitulo());
@@ -138,11 +133,11 @@ public class main {
         banca2.getJuradosNotas().put(jurado6, 7); // Jurado 6 dá nota 7
         banca2.getJuradosNotas().put(jurado7, 5); // Jurado 7 dá nota 5
         banca2.getJuradosNotas().put(jurado8, 6); // Jurado 8 dá nota 6
-        apresentacao2.avaliar(); // A apresentação solicita à banca que calcule a nota
+        apresentacao2.avaliar(); 
         System.out.println("Nota Final do Projeto 2: " + projeto2.getNotaFinal());
 
         System.out.println("\n--- 7. Lista os projetos com nota final >= 7 (usar stream) ---");
-        // Lista os projetos com nota final >=7 (usar stream). 
+        // Lista os projetos com nota final >=7 
         List<Apresentacao> projetosAprovados = apresentacoesDAO.listarProjetosAprovados();
 
         if (projetosAprovados.isEmpty()) {
