@@ -56,6 +56,7 @@ public class Banca implements Avaliavel {
     }
 
     // Calcular a nota final do projeto
+    @Override
     public void calcularNotaFinal() {
         
         // caso não tenha jurados, nota 0
