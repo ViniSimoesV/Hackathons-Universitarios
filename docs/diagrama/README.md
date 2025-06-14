@@ -12,6 +12,11 @@
 ![UML](img/HackathonsUniversitariosUML2.drawio.png "Diagrama UML do Projeto.")
 
 
+- Versão 0.3
+  
+![UML](img/HackathonsUniversitariosUML3.drawio.png "Diagrama UML do Projeto.")
+
+
 - Versão FINAL
 
   
