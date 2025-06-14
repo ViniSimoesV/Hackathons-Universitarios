@@ -11,4 +11,7 @@ package model;
 
 public interface Avaliavel {
     
+    // Calcular a nota final
+    void calcularNotaFinal();
+    
 }
